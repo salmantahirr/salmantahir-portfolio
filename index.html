@@ -1002,9 +1002,6 @@
       .back-top { bottom: 18px; right: 18px; }
     }
   </style>
-  <meta property="og:image" content="https://bolt.new/static/og_default.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
 <body>
 
@@ -1298,8 +1295,8 @@
 
   <script>
     /* ============================================================
-       DATA CONFIGURATION
-       ============================================================ */
+        DATA CONFIGURATION
+        ============================================================ */
 
     // --- OFFICIAL SVG SOCIAL ICONS ---
     const socialLinks = [
@@ -1379,7 +1376,7 @@
       { title: 'AI Video Generation', category: 'AI', emoji: '🎬', tested: 'Testing AI tools for generating short videos from text prompts.', learned: 'Different models produce vastly different quality; prompt structure matters heavily for video.', tools: ['AI Video Tools', 'Prompting'], result: 'Generated several short AI video clips with varying styles.' },
       { title: 'Google Flow Experiments', category: 'AI', emoji: '🌊', tested: 'Exploring Google Flow for AI-driven creative workflows.', learned: 'Google Flow enables new types of AI-assisted creative generation.', tools: ['Google Flow', 'AI'], result: 'Experimented with multiple creative generation flows.' },
       { title: 'AI Physics Video Generation', category: 'AI', emoji: '⚛️', tested: 'Generating videos that simulate physics-based scenarios using AI.', learned: 'AI can approximate physics but struggles with complex interactions.', tools: ['AI Video', 'Physics Sim'], result: 'Created test videos demonstrating AI physics approximation.' },
-      { title: 'AI Voice Assistant Experiments', category: 'AI', emoji: '🗣️️', tested: 'Building and testing voice-based AI interaction systems.', learned: 'Voice latency and natural language understanding are key challenges.', tools: ['AI Voice', 'Python'], result: 'Built a prototype voice assistant (Aurel).' },
+      { title: 'AI Voice Assistant Experiments', category: 'AI', emoji: '🗣', tested: 'Building and testing voice-based AI interaction systems.', learned: 'Voice latency and natural language understanding are key challenges.', tools: ['AI Voice', 'Python'], result: 'Built a prototype voice assistant (Aurel).' },
       { title: 'Prompt Engineering Experiments', category: 'AI', emoji: '✏️', tested: 'Systematic testing of prompt structures and techniques.', learned: 'Structured prompts with clear context produce significantly better results.', tools: ['ChatGPT', 'Gemini', 'OpenRouter'], result: 'Developed reusable prompt templates and patterns.' },
       { title: 'AI Image Generation', category: 'Design', emoji: '🖼️', tested: 'Exploring AI image generation for creative and design purposes.', learned: 'Style references and detailed descriptions dramatically improve output quality.', tools: ['AI Image Tools', 'Canva'], result: 'Created AI-generated images for design projects.' },
       { title: 'Vibe Coding', category: 'Development', emoji: '💻', tested: 'Building software by iterating quickly with AI-assisted coding.', learned: 'AI-assisted coding accelerates prototyping but requires careful review.', tools: ['AI Tools', 'JavaScript', 'HTML/CSS'], result: 'Rapidly prototyped multiple web interfaces.' },
@@ -1438,8 +1435,8 @@
     ];
 
     /* ============================================================
-       RENDER FUNCTIONS
-       ============================================================ */
+        RENDER FUNCTIONS
+        ============================================================ */
 
     function renderLearning() {
       const grid = document.getElementById('learningGrid');
@@ -1594,8 +1591,8 @@
     }
 
     /* ============================================================
-       NAVIGATION
-       ============================================================ */
+        NAVIGATION
+        ============================================================ */
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     const nav = document.getElementById('nav');
@@ -1645,15 +1642,15 @@
     });
 
     /* ============================================================
-       BACK TO TOP
-       ============================================================ */
+        BACK TO TOP
+        ============================================================ */
     document.getElementById('backTop').addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     /* ============================================================
-       SCROLL REVEAL
-       ============================================================ */
+        SCROLL REVEAL
+        ============================================================ */
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1666,13 +1663,13 @@
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     /* ============================================================
-       DYNAMIC YEAR
-       ============================================================ */
+        DYNAMIC YEAR
+        ============================================================ */
     document.getElementById('year').textContent = new Date().getFullYear();
 
     /* ============================================================
-       INIT
-       ============================================================ */
+        INIT
+        ============================================================ */
     renderLearning();
     renderSkills();
     renderProjectFilters();
