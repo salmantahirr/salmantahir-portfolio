@@ -1554,6 +1554,16 @@
         demo: 'https://salmantahirr.github.io/SALSHI-SECRET-MESSAGE/',
         github: 'https://github.com/salmantahirr/SALSHI-SECRET-MESSAGE'
       }
+,
+      {
+        title: 'My Telegram Portfolio Bot',
+        category: 'Automation',
+        image: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&auto=format&fit=crop&q=60',
+        description: 'My personal Telegram portfolio bot where visitors can explore who I am, my projects, services, Salshi, and ways to contact me.',
+        tech: ['Telegram', 'Bot', 'Automation'],
+        demo: 'https://t.me/Salmantahir_bot',
+        telegram: true
+      }
     ];
 
     const projectCategories = ['All', 'AI', 'Development', 'Automation'];
@@ -1693,8 +1703,8 @@
             <p class="project-desc">${p.description}</p>
             <div class="project-tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div>
             <div class="project-links">
-              <a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="primary" title="View ${p.title} Live Demo">Live Demo</a>
-              <a href="${p.github}" target="_blank" rel="noopener noreferrer" title="View ${p.title} on GitHub">GitHub</a>
+              <a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="primary" title="${p.telegram ? 'Open Salman Tahir Telegram Portfolio Bot' : 'View ' + p.title + ' Live Demo'}">${p.telegram ? 'Open Telegram Bot' : 'Live Demo'}</a>
+              ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener noreferrer" title="View ${p.title} on GitHub">GitHub</a>` : ''}
             </div>
           </div>
         </article>
