@@ -9,7 +9,6 @@
   <meta name="publisher" content="Salman Tahir" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0a0e17" />
-  <meta name="keywords" content="Salman Tahir, Salman Tahir portfolio, Software Engineering student, AI Builder, AI Developer, Web Developer, Software Engineer, Pakistan Developer, AI Engineer, Graphic Designer, Freelancer, Salshi, AI projects, web development, creative technology, developer portfolio, software engineering portfolio">
   <link rel="canonical" href="https://www.salmantahir.tech/" />
 
   <!-- Open Graph -->
@@ -1632,7 +1631,7 @@
         <ul class="cert-ticker-list"${hidden ? ' aria-hidden="true"' : ''}>
           ${certPlatforms.map(p => `
             <li class="cert-item">
-              <span class="cert-logo"><img src="${p.logo}" alt="${hidden ? '' : p.name}" loading="lazy" decoding="async"></span>${p.name}
+              <span class="cert-logo"><img src="${p.logo}" alt="${p.name}" title="${p.name}" loading="lazy" decoding="async"></span>${p.name}
             </li>`).join('')}
         </ul>`;
       // Two identical lists -> track slides -50% for a seamless infinite loop
@@ -1685,7 +1684,7 @@
       targetGrid.innerHTML = filtered.map(p => `
         <article class="project-card">
           <div class="project-thumb">
-            <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=60';" />
+            <img src="${p.image}" alt="${p.title}" title="${p.title}" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=60';" />
           </div>
           <div class="project-body">
             <span class="project-cat">${p.category}</span>
